@@ -27,6 +27,7 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
+        this.dbMeterStart();
         this.receivedEvent('deviceready');
     },
 
@@ -40,6 +41,14 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+
+    dbMeterStart: function() {
+        DBMeter.start(function(dB){
+                      document.getElementById("test").innerText = "Decibel level: " + dB;
+                    }, function(e){
+                        document.getElementById("test").innerText = 'code: ' + e.code + ', message: ' + e.message;
+        });
     }
 };
 

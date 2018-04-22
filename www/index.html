@@ -45,29 +45,6 @@
         
             <p id="test"></p>
             <script type="text/javascript" src="cordova.js"></script>
-          <!-- <script type="text/javascript" src="js/index.js"></script>-->
-            <script type="text/javascript">
-                document.addEventListener("deviceready", onDeviceReady, false);
-                function onDeviceReady() {
-
-                    /*alert("Hello");*/
-
-                    
-                    DBMeter.start(function(dB){
-                      document.getElementById("test").innerText = dB;
-                    }, function(e){
-                        document.getElementById("test").innerText = 'code: ' + e.code + ', message: ' + e.message;
-                    }); 
-                 
-                 /*DBMeter.start(function(dB){
-                 console.log(dB);
-                 function(e){
-                    document.getElementById("test").inne
-                 }
-                    document.getElementById("test").innerText = dB;
-                 });*/
-                }
-
-            </script>
+            <script type="text/javascript" src="js/index.js"></script>
         </body>
     </html>
