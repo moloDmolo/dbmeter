@@ -1,0 +1,57 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "AndroidManifest.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"DBMeter\"><param name=\"android-package\" value=\"org.apache.cordova.dbmeter.DBMeter\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-dbmeter": {
+      "PACKAGE_NAME": "com.example.dbm"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.example.dbm"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-dbmeter.DBMeter",
+      "file": "plugins/cordova-plugin-dbmeter/dbmeter.js",
+      "pluginId": "cordova-plugin-dbmeter",
+      "clobbers": [
+        "DBMeter"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-dbmeter": "2.1.0",
+    "cordova-plugin-whitelist": "1.3.3"
+  }
+}

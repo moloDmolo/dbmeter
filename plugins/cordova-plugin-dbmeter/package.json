@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      "cordova-plugin-dbmeter",
+      "/home/malay/dbmeter"
+    ]
+  ],
+  "_from": "cordova-plugin-dbmeter@latest",
+  "_id": "cordova-plugin-dbmeter@2.1.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/cordova-plugin-dbmeter",
+  "_nodeVersion": "8.9.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-dbmeter-2.1.0.tgz_1513984929505_0.18604119401425123"
+  },
+  "_npmUser": {
+    "email": "alexis.kofman@gmail.com",
+    "name": "alexiskofman"
+  },
+  "_npmVersion": "5.5.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "cordova-plugin-dbmeter",
+    "raw": "cordova-plugin-dbmeter",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-dbmeter/-/cordova-plugin-dbmeter-2.1.0.tgz",
+  "_shasum": "464c454ad42a4db77de98b271728358a80886a00",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-dbmeter",
+  "_where": "/home/malay/dbmeter",
+  "author": {
+    "name": "Alexis Kofman"
+  },
+  "bugs": {
+    "url": "https://github.com/akofman/cordova-plugin-dbmeter/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-dbmeter",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova DBMeter plugin",
+  "devDependencies": {
+    "cordova": "^8.0.0",
+    "cordova-paramedic": "^0.5.0",
+    "eslint": "^2.2.0",
+    "ios-sim": "^5.0.6"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-VoE5CtUBI9hum4caO7TXk9dkA07qJKA2LhP05olGwcpzId4UH7yc3kgM2d/VK839ToV4Zaqaf5Kg4wA75Z/QJA==",
+    "shasum": "464c454ad42a4db77de98b271728358a80886a00",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-dbmeter/-/cordova-plugin-dbmeter-2.1.0.tgz"
+  },
+  "homepage": "https://github.com/akofman/cordova-plugin-dbmeter",
+  "keywords": [
+    "android",
+    "audio",
+    "cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova:plugin",
+    "dbmeter",
+    "decibel",
+    "ecosystem:cordova",
+    "ios",
+    "sound",
+    "volume"
+  ],
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "name": "alexiskofman",
+      "email": "alexis.kofman@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-dbmeter",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akofman/cordova-plugin-dbmeter.git"
+  },
+  "scripts": {
+    "test": "eslint dbmeter.js tests",
+    "test-android": "cordova-paramedic --platform android --plugin ./ --verbose",
+    "test-ios": "cordova-paramedic --platform ios --plugin ./ -verbose"
+  },
+  "version": "2.1.0"
+}

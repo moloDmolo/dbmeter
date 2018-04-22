@@ -1,0 +1,18 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-dbmeter": {
+      "PACKAGE_NAME": "com.example.dbm"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.example.dbm"
+    }
+  },
+  "dependent_plugins": {}
+}
