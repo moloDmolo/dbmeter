@@ -1,50 +1,76 @@
-    <!DOCTYPE html>
-    <!--
-        Licensed to the Apache Software Foundation (ASF) under one
-        or more contributor license agreements.  See the NOTICE file
-        distributed with this work for additional information
-        regarding copyright ownership.  The ASF licenses this file
-        to you under the Apache License, Version 2.0 (the
-        "License"); you may not use this file except in compliance
-        with the License.  You may obtain a copy of the License at
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no
+        initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 
-        http://www.apache.org/licenses/LICENSE-2.0
+    <title>Arduino LED On/Off Bluetooth</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <style>
+        @import 'ui/css/evothings-app.css';
+    </style>
 
-        Unless required by applicable law or agreed to in writing,
-        software distributed under the License is distributed on an
-        "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-         KIND, either express or implied.  See the License for the
-        specific language governing permissions and limitations
-        under the License.
-    -->
-    <html>
-        <head>
-            <!--
-            Customize this policy to fit your own app's needs. For more guidance, see:
-                https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-            Some notes:
-                * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-                * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-                * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                    * Enable inline JS: add 'unsafe-inline' to default-src
-            -->
-            <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
-            <meta name="format-detection" content="telephone=no">
-            <meta name="msapplication-tap-highlight" content="no">
-            <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-            <link rel="stylesheet" type="text/css" href="css/index.css">
-            <title>Hello World</title>
-            <style type="text/css">
-                body {
-                    background: black;
-                    color: white;
-                }
-            </style>
-        </head>
-        <body>
+    <script>
+    // Redirect console.log to Evothings Workbench.
+    if (window.hyper && window.hyper.log) { console.log = hyper.log }
+    window.onerror = function(msg, url, line)
+    {
+        console.log(msg + ": " + url + ":" + line);
+    };
+    </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name = "format-detection" content = "telephone=no"/>
+        <!--
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
+        -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+
+        <title>Light Control</title>
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+    <body ontouchstart=""><!-- ontouchstart="" enables low-delay CSS transitions. -->
+
+    <header>
+        <button class="back" onclick="history.back()">
+            <img src="ui/images/arrow-left.svg" />
+        </button>
+
+        <!--<img class="logotype" src="ui/images/logo.svg" alt="Evothings" />-->
+
+        <!--<button class="menu" onclick=""><img src="ui/images/menu.svg" /></button>-->
+    </header>
+    
+
+    <div data-role="main" class="ui-content">
+  
+    <h1>Bluetooth LED Remote Control</h1>
+    <div id="connectionScreen">
+            <ul id="deviceList" class="topcoat-list">      
+            </ul>
+            <div style="margin: 10px">            
+                <button class="topcoat-button" id="refreshButton">Refresh</button>
+            </div>            
+        </div>
         
-            <p id="test"></p>
-            <script type="text/javascript" src="cordova.js"></script>
-            <script type="text/javascript" src="js/index.js"></script>
-        </body>
-    </html>
+        <div id="colorScreen">
+           <p id="test"></p>
+           <button class="green wide" onclick="app.sendToHC05()">Send</button>
+        </div>
+        <div id="messageDiv" style="font-size:75%"></div>        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/underscore-min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+       <!-- <script type="text/javascript">
+            app.ledR = function(){
+                bluetoothSerial.write("j");
+            }
+        </script>-->
+        <!--<script type="text/javascript" src="js/dbMeter.js"></script>dbmeter -->
+        </div>
+        
+
+    </body>
+</html>
